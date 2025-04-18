@@ -1,0 +1,14 @@
+// This class defines a thread that prints characters A to E
+public class PrintCharacters extends Thread {
+    @Override
+    public void run() {
+        for (char c = 'A'; c <= 'E'; c++) {
+            System.out.println("Character: " + c);
+            try {
+                Thread.sleep(700);
+            } catch (InterruptedException e) {
+                System.out.println("Thread interrupted.");
+            }
+        }
+    }
+}
